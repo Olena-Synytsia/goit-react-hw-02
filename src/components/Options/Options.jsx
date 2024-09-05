@@ -1,12 +1,22 @@
 import s from "./Options.module.css";
 
-const Options = () => {
+const Options = ({ onFeedback, onReset, totalFeedback }) => {
   return (
     <div className={s.container}>
-      <button className={s.button}>Good</button>
-      <button className={s.button}>Neutral</button>
-      <button className={s.button}>Bad</button>
-      <button className={s.button}>Reset</button>
+      <button className={s.button} onClick={() => onFeedback("good")}>
+        Good
+      </button>
+      <button className={s.button} onClick={() => onFeedback("neutral")}>
+        Neutral
+      </button>
+      <button className={s.button} onClick={() => onFeedback("bad")}>
+        Bad
+      </button>
+      {totalFeedback > 0 && (
+        <button className={s.button} onClick={onReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };

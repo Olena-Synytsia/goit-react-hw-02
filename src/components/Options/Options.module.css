@@ -1,3 +1,20 @@
 .container {
   width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.button {
+  background-color: rgb(231, 231, 231);
+  border: 2px solid gray;
+  font-size: 16px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.button:hover,
+.button:focus {
+  background-color: turquoise;
+  border-color: teal;
+  cursor: pointer;
 }
